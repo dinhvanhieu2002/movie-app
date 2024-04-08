@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:background="#46000000">
+
+        <ImageButton
+            android:id="@+id/pip"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_picture_in_picture_24dp"
+            app:tint="#fff" />
+
+        <ImageButton
+            android:id="@+id/nextVideo"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_toEndOf="@+id/pausePlay"
+            android:layout_centerInParent="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerCrop"
+            android:src="@drawable/action_skip_next"
+            app:tint="#fff" />
+
+
+        <ImageButton
+            android:id="@+id/pausePlay"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_centerInParent="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerCrop"
+            android:src="@drawable/action_pause"
+            android:layout_marginHorizontal="20dp"
+            app:tint="#fff" />
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.customui.views.YouTubePlayerSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:fontSize="12sp"
+            app:color="@color/red"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/toggleFullScreen"
+            android:id="@+id/playerSeekBar"
+
+            />
+
+        <ImageButton
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:id="@+id/toggleFullScreen"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/action_fullscreen"
+            app:tint="#fff"
+             />
+    </RelativeLayout>
+
+</RelativeLayout>

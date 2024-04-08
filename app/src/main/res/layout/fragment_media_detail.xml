@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="234dp"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:layout_alignParentTop="true" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/gradient_horizontal"
+                        android:clipToPadding="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/left_guide_line"
+                        app:layout_constraintGuide_percent=".20"
+                        android:orientation="vertical" />
+                    <androidx.constraintlayout.widget.Guideline
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/right_guide_line"
+                        app:layout_constraintGuide_percent=".80"
+                        android:orientation="vertical" />
+
+                    <ImageView
+                        android:id="@+id/heroImage"
+                        android:layout_width="0dp"
+                        android:layout_height="350dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="@+id/right_guide_line"
+                        app:layout_constraintStart_toStartOf="@+id/left_guide_line"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black"
+                    android:padding="16dp">
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="32sp"
+                        android:textColor="@color/white"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp">
+
+                        <TextView
+                            android:id="@+id/tvCircularRate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="@color/circular_progress"
+                            android:textSize="14sp"
+                            android:background="@drawable/rounded_item"
+                            />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/genresGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+                            android:layout_marginStart="10dp"
+                            >
+
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_overview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:maxLines="5"
+                        android:ellipsize="end"
+                        android:textSize="16sp"
+                        android:textColor="@color/white" />
+
+
+                    <LinearLayout
+                        android:layout_marginTop="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        >
+
+                        <ImageView
+                            android:paddingHorizontal="11dp"
+                            android:paddingVertical="8dp"
+                            android:id="@+id/iv_favorite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_favorite"
+                            app:tint="@color/red"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/ivWatch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:backgroundTint="@color/red"
+                            android:paddingHorizontal="22dp"
+                            android:paddingVertical="8dp"
+                            android:text="@string/watch_now"
+                            android:textAllCaps="true"
+                            android:gravity="center"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/startRoom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/background_button_login"
+                            android:text="@string/start_room"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnTwitterShare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/background_button_login"
+                            android:text="@string/twitter"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cast"
+                            android:textAllCaps="true"
+                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <View style="@style/DividerBottomTitle"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rcvCast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            />
+
+                    </LinearLayout>
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_marginTop="40dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/titleLayoutVideo"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="vertical"-->
+<!--                            app:layout_constraintEnd_toEndOf="@+id/videosIndicator"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="@string/videos"-->
+<!--                                android:textAllCaps="true"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textSize="24sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <View style="@style/DividerBottomTitle" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <me.relex.circleindicator.CircleIndicator3-->
+<!--                            android:id="@+id/videosIndicator"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="24dp"-->
+
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--                        <androidx.viewpager2.widget.ViewPager2-->
+<!--                            android:id="@+id/vpVideos"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/titleLayoutVideo"-->
+<!--                            app:layout_constraintBottom_toTopOf="@+id/videosIndicator"-->
+<!--                            />-->
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_marginTop="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/titleLayoutBackdrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="@+id/backdropIndicator"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/backdrop"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <View style="@style/DividerBottomTitle" />
+                        </LinearLayout>
+
+                        <me.relex.circleindicator.CircleIndicator3
+                            android:id="@+id/backdropIndicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/vpBackdrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="230dp"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/titleLayoutBackdrop"
+                            app:layout_constraintBottom_toTopOf="@+id/backdropIndicator"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/posters"
+                            android:textAllCaps="true"
+                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <View style="@style/DividerBottomTitle"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rcvPoster"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/reviews"
+                            android:textAllCaps="true"
+                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <View style="@style/DividerBottomTitle"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tipComment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextColor="@color/black"
+                                android:backgroundTint="@color/white"
+                                app:hintEnabled="false">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etComment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/write_your_comment"
+                                    android:inputType="text"
+                                    android:minHeight="48dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="16sp"
+                                    android:padding="20dp"
+                                    android:imeOptions="actionDone"
+                                    android:textColor="@color/black"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnSend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/send"
+                                android:textStyle="bold"
+                                android:layout_gravity="end"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/red"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no_comment_here"
+                            android:id="@+id/tvNoComment"
+                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginVertical="20dp"
+                            android:visibility="gone"
+                            />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rcvReviews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+<!--    <RelativeLayout-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/loadingLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:background="#333">-->
+
+<!--        <com.google.android.material.progressindicator.LinearProgressIndicator-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:id="@+id/linearProgress"-->
+<!--            android:layout_width="match_parent"-->
+<!--            app:indicatorColor="@color/red"-->
+<!--            android:layout_height="10dp"/>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/logoLayout"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="26sp"-->
+<!--                android:text="@string/nix"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="26sp"-->
+<!--                android:textColor="@color/red"-->
+<!--                android:text="@string/flet" />-->
+<!--        </LinearLayout>-->
+<!--    </RelativeLayout>-->
+</RelativeLayout>

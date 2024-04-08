@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpHero"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popular_movies"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+             />
+
+        <View style="@style/DividerBottomTitle"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvPopularMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popular_series"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <View style="@style/DividerBottomTitle"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvPopularSeries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/top_rated_movies"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <View style="@style/DividerBottomTitle"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvTopRatedMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/top_rated_series"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <View style="@style/DividerBottomTitle"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvTopRatedSeries"
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

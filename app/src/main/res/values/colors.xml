@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gray">#E5E5E5</color>
+    <color name="divider">#6F6B6B</color>
+    <color name="text_primary">#E6E6E6</color>
+    <color name="text_secondary">#B3B3B3</color>
+    <color name="dark_gray">#262626</color>
+    <color name="ripple">#E5E5E5</color>
+    <color name="red">#E50914</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_transparent">#BF000000</color>
+    <color name="app_bar_black">#131313</color>
+    <color name="grey">#333333</color>
+    <color name="circular_progress">#66bb6a</color>
+
+    <color name="login_background">#191A1F</color>
+    <color name="hint_background">#282A34</color>
+    <color name="text_subtitle">#555151</color>
+    <color name="text_hint">#91929D</color>
+    <color name="background_button_login">#3961E3</color>
+    <color name="bg_nav">#363636</color>
+    <color name="title_people_background">#99000000</color>
+</resources>

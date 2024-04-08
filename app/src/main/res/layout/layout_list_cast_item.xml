@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="190dp"
+    android:layout_height="290dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivHero"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/hero"
+        android:scaleType="centerCrop"
+        android:clipToPadding="false" />
+
+    <TextView
+        android:id="@+id/tvPeopleName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:background="@color/title_people_background"
+        android:layout_alignParentBottom="true"
+        android:text="@string/person_name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/nav_menu">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:title="@string/home"
+                android:icon="@drawable/ic_home"/>
+
+            <item
+                android:id="@+id/nav_movie"
+                android:title="@string/movie"
+                android:icon="@drawable/ic_movie"/>
+
+            <item
+                android:id="@+id/nav_tv"
+                android:title="@string/tv"
+                android:icon="@drawable/ic_tv"/>
+
+            <item
+                android:id="@+id/nav_search"
+                android:title="@string/search"
+                android:icon="@drawable/ic_search"/>
+
+            <item
+                android:id="@+id/nav_join_room"
+                android:title="@string/join_room"
+                android:icon="@drawable/baseline_add_24"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/personal">
+        <menu>
+            <item
+                android:id="@+id/nav_favorite"
+                android:title="@string/favorite"
+                android:icon="@drawable/ic_favorite"/>
+
+            <item
+                android:id="@+id/nav_review"
+                android:title="@string/reviews"
+                android:icon="@drawable/ic_review"/>
+
+            <item
+                android:id="@+id/logout"
+                android:title="@string/logout"
+                android:icon="@drawable/ic_exit"/>
+
+        </menu>
+    </item>
+</menu>
